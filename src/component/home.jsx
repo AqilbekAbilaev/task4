@@ -15,6 +15,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleDelete = () => {
+    console.log(isCheck);
     try {
       isCheck.forEach(async (item) => {
         await axios.delete("/users:" + item);
