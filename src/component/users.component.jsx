@@ -8,8 +8,13 @@ const Users = ({ users, setUsers, deleteUserEvent, isCheck, setIsCheck }) => {
 
   useEffect(() => {
     const getUsers = async () => {
-      const response = await axios.get("/users");
-      setUsers(response?.data);
+      try {
+        const response = await axios.get("/users");
+        setUsers(response?.data);
+        console.log(response?.data);
+      } catch (err) {
+        console.log(err);
+      }
     };
 
     getUsers();
