@@ -5,7 +5,7 @@ const Layout = () => {
         <main className="App">
             <Outlet />
         </main>
-    )
+    ) 
 }
 
 export default Layout;
